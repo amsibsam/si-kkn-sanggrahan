@@ -8,7 +8,7 @@
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Sistem Informasi Rekomendasi Tempat PI</title>
+    <title>Sistem Informasi RT</title>
 
     <!-- Bootstrap core CSS -->
     {{ HTML::style('assets/css/bootstrap.min.css') }}
@@ -32,8 +32,8 @@
     <div class="lock-wrapper">
         <div class="lock-box text-center">
         <img src="{{ URL::asset('assets/img/follower-avatar.jpg') }}" alt="lock avatar"/>
-            <h1>CRysDIP</h1>
-            <span class="locked">Sistem Informasi Rekomendasi Tempat PI</span>
+            <h1>Sistem Informasi RT</h1>
+            
             {{ Form::open(array('url' => 'login', 'class' => 'form-inline', 'role' => 'form')) }}
                 <div class="form-group col-lg-12">
                     <input required type="text" autofocus name="username" placeholder="Username" class="form-control">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Sistem Informasi Rekomendasi PI - @yield('title')</title>
+  <title>Sistem Informasi RT- @yield('title')</title>
   <!-- Bootstrap core CSS -->
   {{ HTML::style('assets/css/bootstrap.min.css') }}
   {{ HTML::style('assets/css/bootstrap-reset.css') }}
@@ -28,7 +28,7 @@
         <div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
       </div>
       <!--logo start-->
-      <a href="{{ route('admin.dashboard') }}" class="logo" ><span>SISTEM INFORMASI RT 28 SANGGRAHAN</span></a>
+      <a href="{{ route('admin.dashboard') }}" class="logo" ><span>SISTEM INFORMASI RT</span></a>
       <!--logo end-->
 
       <div class="top-nav ">

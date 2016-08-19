@@ -7,13 +7,13 @@
       <li>
         <a href="{{ route('admin.dashboard') }}" {{ (Request::is('admin/dashboard') ? 'class=active' : '') }}>
           <i class="icon-home"></i>
-          <span>Home</span>
+          <span>Beranda</span>
         </a>
       </li>
       <li>
         <a href="{{ route('admin.jurusan.index') }}" {{ (Request::is('admin/jurusan') ? 'class=active' : '') }}>
           <i class="icon-tag"></i>
-          <span>Jurusan</span>
+          <span>Data Warga</span>
         </a>
       </li>
       <!-- <li>
