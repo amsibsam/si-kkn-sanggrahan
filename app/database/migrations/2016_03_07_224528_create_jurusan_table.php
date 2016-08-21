@@ -18,7 +18,7 @@ class CreateJurusanTable extends Migration {
 			$table->string('nama_jurusan', 40);
 			$table->string('no_ktp', 20);
 			$table->string('alamat', 40);
-			$table->enum('jenis_kelamin', array('Laki-Laki', 'Perempuan'));
+			$table->string('jenis_kelamin', 30);
 			$table->string('tanggal_lahir', 20);
 			$table->string('tempat_lahir', 15);
 			$table->string('golongan_darah', 3);
