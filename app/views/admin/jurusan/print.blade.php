@@ -1,15 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.printapp')
 
-@section('title')
-Jurusan
-@endsection
-
-@section('head')
-
-@endsection
-
-@section('sidebar')
-@include('layouts.sidebar')
 @endsection
 
 @section('content')
@@ -18,20 +8,12 @@ Jurusan
     <!-- page start-->
     <section class="panel">
       <header class="panel-heading">
-        <b>JURUSAN</b>
+        <b>Data Warga</b>
       </header>
       <div class="panel-body">
-        <div class="adv-table editable-table ">
-          <div class="clearfix">
-            <div class="btn-group">
-              <button id="editable-sample_new" class="btn green" data-toggle="modal" href="#tambahModal">
-                Tambah <i class="icon-plus"></i>
-              </button><br><br>
-              <a href="{{ route('admin.print.index') }}"><button class="btn btn-default" type="button" onclick="{{ route('admin.print.index') }}">Print</button></a>
-            </div>
-          </div>
+        <div >
           <div class="space15"></div>
-          <table class="table table-striped table-hover table-bordered" id="editable-sample">
+          <table border="2px">
             <thead>
               <tr>
                 <td align="center"><b>No Identitas</b></td>
@@ -50,37 +32,22 @@ Jurusan
                     <option value="Perempuan">Perempuan</option>
                   </select>
                 </td> -->
-                <td align="center"></td>
-                <td align="center"></td>
+              
               </tr>
             </thead>
             <tbody>
               <?php $i =1; ?>
               @foreach($jurusans as $jurusan)
                 <tr class="">
-                  <td><?php echo $i++ ?></td>
-                  <td>{{ $jurusan->no_ktp }}</td>
-                  <td>{{ $jurusan->nama_jurusan }}</td>
-                  <td>{{ $jurusan->alamat }}</td>
-                  <td>{{ $jurusan->golongan_darah }}</td>
-                  <td>{{ $jurusan->status_pekerjaan }}</td>
-                  <td>{{ $jurusan->tanggal_lahir }}</td>
-                  <td>{{ $jurusan->tempat_lahir }}</td>
-                  <td>{{ $jurusan->jenis_kelamin }}</td>
-                  <td align="center">
-                    <button type="button" class="btn btn-success btn-xs" data-toggle="modal" href="#editModal"onclick="editForm('{{ route('admin.jurusan.edit', $jurusan->id) }}')" >
-                      <i class="icon-edit"></i>
-                    </button>
-                  </td>
-                  <td align="center">
-                    {{ Form::model($jurusan, ['route' => ['admin.jurusan.destroy', $jurusan->id], 'method'=>'DELETE', 'class' => 'form-inline', 'id' => 'form-hapus-'.$i, 'onsubmit' => 'return confirmHapus()']) }}
-                    <a href="#" class="red" onclick="confirmHapus('{{ $i }}','{{ $jurusan->nama_jurusan }}')">
-                      <button type="button" class="btn btn-danger btn-xs">
-                        <i class="icon-trash btn-danger btn-xs"></i>
-                      </button>
-                    </a>
-                    {{ Form::close() }}
-                  </td>
+                  <td align="center"><?php echo $i++ ?></td>
+                  <td align="center">{{ $jurusan->no_ktp }}</td>
+                  <td align="center">{{ $jurusan->nama_jurusan }}</td>
+                  <td align="center">{{ $jurusan->alamat }}</td>
+                  <td align="center">{{ $jurusan->golongan_darah }}</td>
+                  <td align="center">{{ $jurusan->status_pekerjaan }}</td>
+                  <td align="center">{{ $jurusan->tanggal_lahir }}</td>
+                  <td align="center">{{ $jurusan->tempat_lahir }}</td>
+                  <td align="center">{{ $jurusan->jenis_kelamin }}</td>
                 </tr>
                @endforeach
             </tbody>
@@ -186,5 +153,10 @@ Jurusan
       dataType: "html"
       });
   }
+
+  window.load = print_d();
+    function print_d(){
+      window.print();
+    }
 </script>
 @endsection

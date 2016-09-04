@@ -26,7 +26,10 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth'), function()
 
 	Route::resource('jurusan', 'JurusanController');
 
+	Route::resource('print', 'PrintController');
+
 	Route::resource('prodi', 'ProdiController');
+
 	Route::get('getProdi/{id}/{prodi_id}', array('as' => 'admin.prodi.getProdi', 'uses' => 'ProdiController@getProdi'));
 
 	Route::resource('mahasiswa', 'MahasiswaController');

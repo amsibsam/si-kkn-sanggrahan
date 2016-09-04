@@ -38,7 +38,7 @@ class JurusanTableSeeder extends Seeder {
             'tempat_lahir'=>'Bantul',
             'golongan_darah'=>'O',
             'status_pekerjaan'=>'Sekolah Dasar',
-            'alamat' => 'Giwangan'],
+            'alamat' => 'Giwangan'],    
         ];
 
         DB::table('jurusan')->insert($jurusan);
